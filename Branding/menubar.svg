@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+  <!-- Menu bar template glyph (18 pt @2x). Black on transparent; macOS tints it. -->
+  <defs>
+    <path id="b" d="M -6 -46 C -60 -110 -60 -210 10 -240 C 70 -262 128 -222 110 -160 C 96 -112 54 -70 30 -40 Z"/>
+    <mask id="m">
+      <rect width="36" height="36" fill="#fff"/>
+      <circle cx="31.4" cy="11.2" r="4.6" fill="#000"/>
+    </mask>
+  </defs>
+  <g mask="url(#m)" fill="#000">
+    <path d="M 7.04 29.96 A 15.5 15.5 0 1 1 28.96 29.96" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"/>
+    <g transform="translate(18 19) scale(0.044)">
+      <use href="#b"/>
+      <use href="#b" transform="rotate(120)"/>
+      <use href="#b" transform="rotate(240)"/>
+      <circle r="62"/>
+    </g>
+  </g>
+  <circle cx="31.4" cy="11.2" r="3" fill="#000"/>
+</svg>

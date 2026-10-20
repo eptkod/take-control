@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Take Control app icon. Master artwork; render with render.sh. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B3242"/>
+      <stop offset="1" stop-color="#0D1016"/>
+    </linearGradient>
+    <linearGradient id="heat" gradientUnits="userSpaceOnUse" x1="212" y1="0" x2="812" y2="0">
+      <stop offset="0" stop-color="#3EDCFF"/>
+      <stop offset="0.55" stop-color="#FFB53D"/>
+      <stop offset="1" stop-color="#FF4F3A"/>
+    </linearGradient>
+    <linearGradient id="blade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C7D0DD"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <path id="b" d="M -6 -46 C -60 -110 -60 -210 10 -240 C 70 -262 128 -222 110 -160 C 96 -112 54 -70 30 -40 Z"/>
+  </defs>
+
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)" filter="url(#shadow)"/>
+  <rect x="101.5" y="101.5" width="821" height="821" rx="183.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="3"/>
+
+  <g transform="translate(0 36)">
+  <!-- Gauge: dim track, then the active heat arc up to the knob. -->
+  <path d="M 300 724 A 300 300 0 1 1 724 724" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="40" stroke-linecap="round"/>
+  <path d="M 300 724 A 300 300 0 1 1 772 362" fill="none" stroke="url(#heat)" stroke-width="40" stroke-linecap="round" filter="url(#glow)" opacity="0.55"/>
+  <path d="M 300 724 A 300 300 0 1 1 772 362" fill="none" stroke="url(#heat)" stroke-width="40" stroke-linecap="round"/>
+  <circle cx="772" cy="362" r="34" fill="#FFFFFF"/>
+  <circle cx="772" cy="362" r="14" fill="#FF6A3A"/>
+
+  <!-- Fan -->
+  <g transform="translate(512 512)" fill="url(#blade)">
+    <use href="#b"/>
+    <use href="#b" transform="rotate(120)"/>
+    <use href="#b" transform="rotate(240)"/>
+    <circle r="56" fill="#FFFFFF"/>
+    <circle r="22" fill="#1A1F29"/>
+  </g>
+  </g>
+</svg>
